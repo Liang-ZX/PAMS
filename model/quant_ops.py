@@ -102,7 +102,7 @@ class pams_quant_act(nn.Module):
         act = act * self.qmax / self.alpha
         q_act = self.round(act)
         q_act = q_act * self.alpha / self.qmax
-    
+        # self.epoch += 1  # modified
         return q_act
 
 class QuantConv2d(nn.Module):
@@ -139,11 +139,11 @@ class QuantConv2d(nn.Module):
         if self.bias is not None:
             self.bias.data.uniform_(-stdv, stdv)
 
-    def reset_parameter(self):
-        stdv = 1.0/ math.sqrt(self.weight.size(0))
-        self.weight.data.uniform_(-stdv,stdv)
-        if self.bias_flag:
-            nn.init.constant_(self.bias,0.0)
+    # def reset_parameter(self):
+    #     stdv = 1.0/ math.sqrt(self.weight.size(0))
+    #     self.weight.data.uniform_(-stdv,stdv)
+    #     if self.bias_flag:
+    #         nn.init.constant_(self.bias,0.0)
 
     def forward(self, input, order=None):
         return nn.functional.conv2d(input, self.quant_weight(self.weight), self.bias, self.stride, self.padding, self.dilation, self.groups)

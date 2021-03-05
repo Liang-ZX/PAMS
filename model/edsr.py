@@ -12,6 +12,11 @@ from model.quant_ops import conv3x3
 from model.quant_ops import pams_quant_act
 from model.quant_ops import quant_conv3x3
 
+
+def make_model(args):
+    return PAMS_EDSR(args, bias=True)
+
+
 class PAMS_ResBlock(nn.Module):
     def __init__(self, conv, n_feats, kernel_size, bias=False, 
                 bn=False, act=nn.ReLU(False), res_scale=1, k_bits = 32, ema_epoch=1, name=None):

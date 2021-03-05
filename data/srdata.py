@@ -4,7 +4,7 @@ import random
 import pickle
 
 from data import common
-import pdb
+
 import numpy as np
 import imageio
 import torch
@@ -21,6 +21,7 @@ class SRData(data.Dataset):
         self.input_large = (args.model == 'VDSR')
         self.scale = args.scale
         self.idx_scale = 0
+
         self._set_filesystem(args.dir_data)
         if args.ext.find('img') < 0:
             path_bin = os.path.join(self.apath, 'bin')
@@ -42,19 +43,19 @@ class SRData(data.Dataset):
                     ),
                     exist_ok=True
                 )
-            
+
             self.images_hr, self.images_lr = [], [[] for _ in self.scale]
             for h in list_hr:
                 b = h.replace(self.apath, path_bin)
                 b = b.replace(self.ext[0], '.pt')
                 self.images_hr.append(b)
-                self._check_and_load(args.ext, h, b, verbose=True) 
+                self._check_and_load(args.ext, h, b, verbose=True)
             for i, ll in enumerate(list_lr):
                 for l in ll:
                     b = l.replace(self.apath, path_bin)
                     b = b.replace(self.ext[1], '.pt')
                     self.images_lr[i].append(b)
-                    self._check_and_load(args.ext, l, b, verbose=True) 
+                    self._check_and_load(args.ext, l, b, verbose=True)
         if train:
             n_patches = args.batch_size * args.test_every
             n_images = len(args.data_train) * len(self.images_hr)
@@ -126,9 +127,7 @@ class SRData(data.Dataset):
         elif self.args.ext.find('sep') >= 0:
             with open(f_hr, 'rb') as _f:
                 hr = pickle.load(_f)
-                # print('hr', hr.shape)
             with open(f_lr, 'rb') as _f:
-                # pdb.set_trace()
                 lr = pickle.load(_f)
 
         return lr, hr, filename

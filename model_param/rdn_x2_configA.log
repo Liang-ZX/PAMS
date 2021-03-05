@@ -1,0 +1,1124 @@
+Warning: module RDB_Conv is treated as a zero-op.
+Warning: module RDB is treated as a zero-op.
+Warning: module PixelShuffle is treated as a zero-op.
+Warning: module RDN is treated as a zero-op.
+RDN(
+  4.096 M, 100.000% Params, 2837.307 GMac, 100.000% MACs, 
+  (SFENet1): Conv2d(0.001 M, 0.022% Params, 0.62 GMac, 0.022% MACs, 3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (SFENet2): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (RDBs): ModuleList(
+    4.019 M, 98.102% Params, 2781.731 GMac, 98.041% MACs, 
+    (0): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (1): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (2): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (3): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (4): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (5): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (6): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (7): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (8): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (9): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (10): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (11): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (12): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (13): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (14): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (15): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (16): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (17): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (18): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (19): RDB(
+      0.201 M, 4.905% Params, 139.087 GMac, 4.902% MACs, 
+      (convs): Sequential(
+        0.194 M, 4.729% Params, 134.107 GMac, 4.727% MACs, 
+        (0): RDB_Conv(
+          0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+          (conv): Sequential(
+            0.009 M, 0.226% Params, 6.418 GMac, 0.226% MACs, 
+            (0): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (1): RDB_Conv(
+          0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+          (conv): Sequential(
+            0.018 M, 0.451% Params, 12.791 GMac, 0.451% MACs, 
+            (0): Conv2d(0.018 M, 0.451% Params, 12.769 GMac, 0.450% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (2): RDB_Conv(
+          0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+          (conv): Sequential(
+            0.028 M, 0.676% Params, 19.165 GMac, 0.675% MACs, 
+            (0): Conv2d(0.028 M, 0.676% Params, 19.142 GMac, 0.675% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (3): RDB_Conv(
+          0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+          (conv): Sequential(
+            0.037 M, 0.901% Params, 25.538 GMac, 0.900% MACs, 
+            (0): Conv2d(0.037 M, 0.901% Params, 25.516 GMac, 0.899% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (4): RDB_Conv(
+          0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+          (conv): Sequential(
+            0.046 M, 1.126% Params, 31.911 GMac, 1.125% MACs, 
+            (0): Conv2d(0.046 M, 1.126% Params, 31.889 GMac, 1.124% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+        (5): RDB_Conv(
+          0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+          (conv): Sequential(
+            0.055 M, 1.351% Params, 38.285 GMac, 1.349% MACs, 
+            (0): Conv2d(0.055 M, 1.351% Params, 38.263 GMac, 1.349% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): ReLU(0.0 M, 0.000% Params, 0.022 GMac, 0.001% MACs, )
+          )
+        )
+      )
+      (LFF): Conv2d(0.007 M, 0.176% Params, 4.979 GMac, 0.175% MACs, 224, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (GFF): Sequential(
+    0.03 M, 0.727% Params, 20.581 GMac, 0.725% MACs, 
+    (0): Conv2d(0.021 M, 0.501% Params, 14.185 GMac, 0.500% MACs, 640, 32, kernel_size=(1, 1), stride=(1, 1))
+    (1): Conv2d(0.009 M, 0.226% Params, 6.396 GMac, 0.225% MACs, 32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (UPNet): Sequential(
+    0.038 M, 0.924% Params, 27.981 GMac, 0.986% MACs, 
+    (0): Conv2d(0.037 M, 0.903% Params, 25.582 GMac, 0.902% MACs, 32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): PixelShuffle(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, upscale_factor=2)
+    (2): Conv2d(0.001 M, 0.021% Params, 2.398 GMac, 0.085% MACs, 32, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+params = 4.1 M , flops = 2837.31 GMac

@@ -9,6 +9,11 @@ from model.quant_ops import pams_quant_act
 from model.quant_ops import quant_conv3x3
 from model.quant_ops import QuantConv2d
 
+
+def make_model(args):
+    return PAMS_RDN(args)
+
+
 class PAMS_RDB_Conv(nn.Module):
     def __init__(self, inChannels, growRate, kSize=3, k_bits=32):
         super(PAMS_RDB_Conv, self).__init__()
@@ -17,7 +22,7 @@ class PAMS_RDB_Conv(nn.Module):
 
         self.k_bits = k_bits
         self.conv = nn.Sequential(*[
-            quant_conv3x3(Cin, G, kSize, padding=(kSize-1)//2, stride =1, k_bits= self.k_bits, bias = True),
+            quant_conv3x3(Cin, G, kSize, padding=(kSize-1)//2, stride=1, k_bits=self.k_bits, bias=True),
             nn.ReLU()
         ])
         
@@ -30,6 +35,7 @@ class PAMS_RDB_Conv(nn.Module):
 
         return torch.cat((x1, out), 1)
 
+
 class PAMS_RDB_Conv_in(nn.Module):
     def __init__(self, inChannels, growRate, kSize=3, k_bits=32, name = None):
         super(PAMS_RDB_Conv_in, self).__init__()
@@ -39,7 +45,7 @@ class PAMS_RDB_Conv_in(nn.Module):
         self.k_bits = k_bits
 
         self.conv = nn.Sequential(*[
-            quant_conv3x3(Cin, G, kSize, padding=(kSize-1)//2, stride = 1, k_bits= self.k_bits, bias = True),
+            quant_conv3x3(Cin, G, kSize, padding=(kSize-1)//2, stride=1, k_bits=self.k_bits, bias=True),
             nn.ReLU()
         ])
         
@@ -52,8 +58,9 @@ class PAMS_RDB_Conv_in(nn.Module):
 
         return torch.cat((x, out), 1)
 
+
 class PAMS_RDB(nn.Module):
-    def __init__(self, growRate0, growRate, nConvLayers, kSize=3, k_bits=32, name= None):
+    def __init__(self, growRate0, growRate, nConvLayers, kSize=3, k_bits=32, name=None):
         super(PAMS_RDB, self).__init__()
         G0 = growRate0
         G  = growRate
@@ -63,14 +70,14 @@ class PAMS_RDB(nn.Module):
 
         convs = []
         for c in range(C):
-            convs.append(PAMS_RDB_Conv_in(G0 + c*G, G,kSize ,k_bits =self.k_bits))
+            convs.append(PAMS_RDB_Conv_in(G0 + c*G, G, kSize, k_bits=self.k_bits))
         self.convs = nn.Sequential(*convs)
         
         self.act1 = pams_quant_act(self.k_bits)
         self.act2 = pams_quant_act(self.k_bits)
 
         # Local Feature Fusion
-        self.LFF = QuantConv2d(in_channels=G0 + C*G, out_channels=G0, kernel_size=1, padding=0,k_bits=self.k_bits, stride=1, bias=True)
+        self.LFF = QuantConv2d(in_channels=G0 + C*G, out_channels=G0, kernel_size=1, padding=0, k_bits=self.k_bits, stride=1, bias=True)
 
     def forward(self, x):
         x = self.act1(x)
@@ -84,7 +91,7 @@ class PAMS_RDB(nn.Module):
         return 'rdb'
 
 class PAMS_RDN(nn.Module):
-    def __init__(self,args):
+    def __init__(self, args):
         super(PAMS_RDN, self).__init__()
         r = args.scale[0]
         G0 = args.G0

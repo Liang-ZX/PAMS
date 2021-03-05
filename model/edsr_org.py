@@ -10,6 +10,11 @@ url = {
     'r32f256x4': 'https://cv.snu.ac.kr/research/EDSR/models/edsr_x4-4f62e9ef.pt'
 }
 
+
+def make_model(args):
+    return EDSR(args, is_teacher=True)
+
+
 class EDSR(nn.Module):
     def __init__(self, args, is_teacher, conv=common.default_conv):
         super(EDSR, self).__init__()

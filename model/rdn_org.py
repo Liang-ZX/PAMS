@@ -6,6 +6,10 @@ from model import common
 import torch
 import torch.nn as nn
 
+
+def make_model(args):
+    return RDN(args)
+
 class RDB_Conv(nn.Module):
     def __init__(self, inChannels, growRate, kSize=3):
         super(RDB_Conv, self).__init__()
@@ -89,14 +93,13 @@ class RDN(nn.Module):
 
     def forward(self, x):
         f__1 = self.SFENet1(x)
-        x  = self.SFENet2(f__1)
+        x = self.SFENet2(f__1)
         RDBs_out = []
         for i in range(self.D):
             x = self.RDBs[i](x)
             RDBs_out.append(x)
-            
 
-        x = self.GFF(torch.cat(RDBs_out,1))
+        x = self.GFF(torch.cat(RDBs_out, 1))
         x += f__1
         out = x
 

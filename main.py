@@ -1,9 +1,5 @@
-import json
-import math
-import pdb
 from decimal import Decimal
 
-import cv2
 import torch
 import torch.nn.functional as F
 import torch.nn.utils as utils
@@ -25,6 +21,7 @@ from utils.common import AverageMeter
 torch.manual_seed(args.seed)
 checkpoint = utility.checkpoint(args)
 device = torch.device('cpu' if args.cpu else f'cuda:{args.gpu_id}')
+
 
 class Trainer():
     def __init__(self, args, loader, t_model, s_model, ckp):
@@ -59,7 +56,6 @@ class Trainer():
         self.nor_losses = AverageMeter()
 
     def train(self):
-        self.sheduler.step(self.epoch)
         self.epoch = self.epoch + 1
         lr = self.optimizer.state_dict()['param_groups'][0]['lr']
 
@@ -70,27 +66,28 @@ class Trainer():
 
         self.t_model.eval()
         self.s_model.train()
-        
+
         self.s_model.apply(lambda m: setattr(m, 'epoch', self.epoch))
-        
+
         num_iterations = len(self.loader_train)
         timer_data, timer_model = utility.timer(), utility.timer()
-        
-        for batch, (lr, hr, _, idx_scale) in enumerate(self.loader_train):
+
+        self.loader_train.dataset.set_scale(0)
+        for batch, (lr, hr, _,) in enumerate(self.loader_train):
             num_iters = num_iterations * (self.epoch-1) + batch
 
             lr, hr = self.prepare(lr, hr)
-            data_size = lr.size(0) 
-            
+            data_size = lr.size(0)
+
             timer_data.hold()
             timer_model.tic()
 
             self.optimizer.zero_grad()
 
             if hasattr(self.t_model, 'set_scale'):
-                self.t_model.set_scale(idx_scale)
+                self.t_model.set_scale(0)
             if hasattr(self.s_model, 'set_scale'):
-                self.s_model.set_scale(idx_scale)
+                self.s_model.set_scale(0)
 
             with torch.no_grad():
                 t_sr, t_res = self.t_model(lr)
@@ -99,10 +96,11 @@ class Trainer():
             nor_loss = args.w_l1 * F.l1_loss(s_sr, hr)
             att_loss = args.w_at * util.at_loss(s_res, t_res)
 
-            loss = nor_loss  + att_loss
+            loss = nor_loss + att_loss
 
             loss.backward()
             self.optimizer.step()
+            self.sheduler.step(self.epoch-1)
 
             timer_model.hold()
 
@@ -118,13 +116,12 @@ class Trainer():
                     timer_data.release()))
 
             timer_data.tic()
-        
+
             for name, value in self.s_model.named_parameters():
                 if 'alpha' in name:
                     if value.grad is not None:
                         self.writer_train.add_scalar(f'{name}_grad', value.grad.cpu().data.numpy(), num_iters)
                         self.writer_train.add_scalar(f'{name}_data', value.cpu().data.numpy(), num_iters)
-
 
     def test(self, is_teacher=False):
         torch.set_grad_enabled(False)
@@ -145,7 +142,7 @@ class Trainer():
             for idx_scale, scale in enumerate(self.scale):
                 d.dataset.set_scale(idx_scale)
                 i = 0
-                for lr, hr, filename, _ in tqdm(d, ncols=80):
+                for lr, hr, filename in tqdm(d, ncols=80):
                     i += 1
                     lr, hr = self.prepare(lr, hr)
                     sr, s_res = model(lr)
@@ -181,6 +178,7 @@ class Trainer():
             
         if not self.args.test_only:
             is_best = (best[1][0, 0] + 1 == epoch)
+            self.ckp.plot_psnr(epoch)  #
 
             state = {
             'epoch': epoch,
@@ -235,11 +233,12 @@ def main():
                 refine_path = args.refine
 
             s_checkpoint = ckpt['state_dict'] if 'state_dict' in ckpt else ckpt
+            # torch.save(s_checkpoint, "./trained_model.tar")
             s_model.load_state_dict(s_checkpoint)
             print(f"Load model from {refine_path}")
 
         t = Trainer(args, loader, t_model, s_model, checkpoint)
-        
+
         print(f'{args.save} start!')
         while not t.terminate():
             t.train()

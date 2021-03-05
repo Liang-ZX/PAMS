@@ -8,7 +8,7 @@ import torch
 import torch.nn.utils as utils
 from tqdm import tqdm
 
-class Trainer():
+class orig_Trainer():
     def __init__(self, args, loader, my_model, my_loss, ckp):
         self.args = args
         self.scale = args.scale

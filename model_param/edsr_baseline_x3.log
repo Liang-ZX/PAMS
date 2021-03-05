@@ -1,0 +1,204 @@
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: variables __flops__ or __params__ are already defined for the moduleReLU ptflops can affect your code!
+Warning: module MeanShift is treated as a zero-op.
+Warning: module ShortCut is treated as a zero-op.
+Warning: module ResBlock is treated as a zero-op.
+Warning: module PixelShuffle is treated as a zero-op.
+Warning: module Upsampler is treated as a zero-op.
+Warning: module EDSR is treated as a zero-op.
+EDSR(
+  1.554 M, 100.000% Params, 1095.937 GMac, 100.979% MACs, 
+  (sub_mean): MeanShift(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, 3, 3, kernel_size=(1, 1), stride=(1, 1))
+  (add_mean): MeanShift(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, 3, 3, kernel_size=(1, 1), stride=(1, 1))
+  (head): Sequential(
+    0.002 M, 0.115% Params, 1.239 GMac, 0.114% MACs, 
+    (0): Conv2d(0.002 M, 0.115% Params, 1.239 GMac, 0.114% MACs, 3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (body): Sequential(
+    1.219 M, 78.393% Params, 854.082 GMac, 78.694% MACs, 
+    (0): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (1): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (2): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (3): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (4): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (5): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (6): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (7): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (8): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (9): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (10): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (11): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (12): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (13): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (14): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (15): ResBlock(
+      0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+      (body): Sequential(
+        0.074 M, 4.751% Params, 51.784 GMac, 4.771% MACs, 
+        (0): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(0.0 M, 0.000% Params, 0.708 GMac, 0.065% MACs, inplace=True)
+        (2): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (shortcut): ShortCut(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, )
+    )
+    (16): Conv2d(0.037 M, 2.376% Params, 25.538 GMac, 2.353% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (tail): Sequential(
+    0.334 M, 21.491% Params, 240.615 GMac, 22.170% MACs, 
+    (0): Upsampler(
+      0.332 M, 21.380% Params, 229.841 GMac, 21.177% MACs, 
+      (0): Conv2d(0.332 M, 21.380% Params, 229.841 GMac, 21.177% MACs, 64, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): PixelShuffle(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, upscale_factor=3)
+    )
+    (1): Conv2d(0.002 M, 0.111% Params, 10.774 GMac, 0.993% MACs, 64, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+params = 1.55 M , flops = 1085.31 GMac
